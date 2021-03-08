@@ -136,9 +136,7 @@ app.get('/api/exercise/log', (req, res) => {
 			if (limit)
 				log = log.slice(0, parseInt(limit));
 
-			res.json({
-				_id: userId, username: data.username, log
-			})
+			res.json({ _id: userId, username: data.username, count: log.length, log })
 		}
 	})
 })
